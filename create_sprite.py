@@ -36,5 +36,5 @@ for x2 in range((crophull.width - 5),crophull.width):
     for y2 in range(211):
         crophull.putpixel((x2,y2),(0,0,0))
 
-crophull.save(name +"test.jpg", "JPEG")
+crophull.save(name +".jpg", "JPEG")
 crophull.show()
