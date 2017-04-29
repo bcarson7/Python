@@ -1,6 +1,8 @@
+name = " "
+
 from PIL import Image
 
-img = Image.open('thousandtrailscockpit.dds')
+img = Image.open(name + "cockpit.dds")
 img = img.convert("RGBA")
 datas = img.getdata()
 
@@ -12,4 +14,4 @@ for item in datas:
         newData.append(item)
 
 img.putdata(newData)
-img.save("thousandtrailscockpit.png", "PNG")
+img.save(name + "cockpit.png", "PNG")
