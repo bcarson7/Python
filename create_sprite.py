@@ -21,12 +21,20 @@ cockpit = Image.open(name + "cockpit.dds")
 cropcockpit = cockpit.crop((257, 198, 370, 490))
 csize = 30, 90
 cropcockpit.thumbnail(csize)
+cropcockpit.save(name + "cockpit.jpg")
 
 #Build Final Sprite
-#wingCopy = cropwing.copy()
 wingCopy = Image.open(name + "wing.jpg")
-cockpitCopy = cropcockpit.copy()
+cockpitCopy = Image.open(name + "cockpit.jpg")
 crophull.paste(wingCopy, (25,0))
-crophull.paste(cockpitCopy, (77,215)) #what does 3rd value do?
-crophull.save(name +".jpg", "JPEG")
+#crophull.paste(cockpitCopy, (77,215)) #what does 3rd value do?
+
+for x1 in range(5):
+    for y1 in range(212):
+        crophull.putpixel((x1,y1),(0,0,0))
+for x2 in range((crophull.width - 5),crophull.width):
+    for y2 in range(211):
+        crophull.putpixel((x2,y2),(0,0,0))
+
+crophull.save(name +"test.jpg", "JPEG")
 crophull.show()
