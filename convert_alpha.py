@@ -8,8 +8,8 @@ datas = img.getdata()
 
 newData = []
 for item in datas:
-    if item[0] < 5 and item[1] < 5 and item[2] < 5:
-        newData.append((0, 0, 0, 0))
+    if item[0] == 0 and item[1] == 0 and item[2] == 0:
+        newData.append((0, 0, 0, 255))
     else:
         newData.append(item)
 
