@@ -3,7 +3,7 @@ VU = ''
 URL = ''
 
 while not URL:
-        print('Enter your load destination starting minus http')
+        print('Enter your load destination including http')
         URL = raw_input()
 
 print('Emter the number of virtual users? (100 or fewer)')
