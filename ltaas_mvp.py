@@ -1,7 +1,16 @@
 #!/bin/python
-VU = str(100)
-URL = "http://blazedemo.com"
+VU = ''
+URL = ''
 
+while not URL:
+        print('Enter your load destination starting minus http')
+        URL = raw_input()
+
+print('Emter the number of virtual users? (100 or fewer)')
+VU = raw_input()
+if int(VU) > 100:
+        VU = 1
+VU=str(VU)
 F = open('test.yml','w')
 F.write(
 "execution:" +"\n"
