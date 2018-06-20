@@ -9,4 +9,5 @@ lines = []
 with open(FP_TEST, "rt") as cfp:
         for line in cfp:
                 lines.append(line)
-print(lines[72])
+                if 'Est. SPECfp(R)_rate_base2006' in line:
+                        print(line)
