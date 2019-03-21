@@ -16,7 +16,7 @@ def open_int(x):
         if 'SPECrate2017_int_base' in line:
             newCSV = open("speccpu.csv", "a")
             newCSV.write(line)
-            #newCSV.close()
+            newCSV.close()
 
 def open_fp(x):
     cpufile = open("/home/tester/test-bench/cpu2017/" + fp_files[x])
@@ -24,7 +24,7 @@ def open_fp(x):
         if 'SPECrate2017_fp_base' in line:
             newCSV = open("speccpu.csv", "a")
             newCSV.write(line)
-            #newCSV.close()
+            newCSV.close()
 
 open_int(0)
 open_int(1)
