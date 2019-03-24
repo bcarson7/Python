@@ -11,7 +11,7 @@ int_files = ["CPU2017.001.intrate.refrate.csv", "CPU2017.003.intrate.refrate.csv
 fp_files = ["CPU2017.002.fprate.refrate.csv", "CPU2017.004.fprate.refrate.csv", "CPU2017.006.fprate.refrate.csv"]
 
 def open_int(x):
-    cpufile = open("/home/tester/test-bench/cpu2017/" + int_files[x])
+    cpufile = open("/home/tester/test-bench/cpu2017/result/" + int_files[x])
     for line in cpufile:
         if 'SPECrate2017_int_base' in line:
             newCSV = open("speccpu.csv", "a")
@@ -19,7 +19,7 @@ def open_int(x):
             newCSV.close()
 
 def open_fp(x):
-    cpufile = open("/home/tester/test-bench/cpu2017/" + fp_files[x])
+    cpufile = open("/home/tester/test-bench/cpu2017/result/" + fp_files[x])
     for line in cpufile:
         if 'SPECrate2017_fp_base' in line:
             newCSV = open("speccpu.csv", "a")
