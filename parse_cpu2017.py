@@ -10,6 +10,11 @@ import datetime
 int_files = ["CPU2017.001.intrate.refrate.csv", "CPU2017.003.intrate.refrate.csv", "CPU2017.005.intrate.refrate.csv"]
 fp_files = ["CPU2017.002.fprate.refrate.csv", "CPU2017.004.fprate.refrate.csv", "CPU2017.006.fprate.refrate.csv"]
 
+def add_header():
+    newCSV = open("speccpu.csv", "a")
+    newCSV.write("benchmark,score,null,other\n")
+    newCSV.close()
+
 def open_int(x):
     cpufile = open("/home/tester/test-bench/cpu2017/result/" + int_files[x])
     for line in cpufile:
@@ -26,6 +31,7 @@ def open_fp(x):
             newCSV.write(line)
             newCSV.close()
 
+add_header()
 open_int(0)
 open_int(1)
 open_int(2)
